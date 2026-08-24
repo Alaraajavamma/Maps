@@ -3,7 +3,7 @@ Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Uploaders: @GNOME_TEAM@
-Build-Depends: debhelper-compat (= 13),
+Build-Depends: espeak-ng, debhelper-compat (= 13),
                desktop-file-utils,
                dh-sequence-gir,
                dh-sequence-gnome,
@@ -38,7 +38,7 @@ Homepage: https://wiki.gnome.org/Apps/Maps
 
 Package: gnome-maps
 Architecture: any
-Depends: geoclue-2.0 (>= 2.0),
+Depends: espeak-ng, geoclue-2.0 (>= 2.0),
          gir1.2-adw-1 (>= 1.4~beta),
          gir1.2-gdkpixbuf-2.0,
          gir1.2-geoclue-2.0,
