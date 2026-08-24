@@ -208,8 +208,10 @@ export class MainWindow extends Adw.ApplicationWindow {
 
                                 if (this._navigationInhibitCookie) {
                                     this.application.uninhibit(this._navigationInhibitCookie);
-                                    this._navigationInhibitCookie = 0;
+                                    this._navigationInhibitCookie = null;
                                 }
+
+                                this._mapView.map.viewport.rotation = 0;
                               });
             this._navigatorSignalsConnected = true;
         }
@@ -234,11 +236,28 @@ export class MainWindow extends Adw.ApplicationWindow {
 
     _onNavigationProgress(navigator, nextIndex, distanceToNext,
                           remainingDistance, remainingTime,
-                          snappedLatitude, snappedLongitude) {
+                          snappedLatitude, snappedLongitude,
+                          heading) {
+        let zoom = navigator.params.followZoom;
+        if (distanceToNext > 1500) {
+            zoom = 15;
+        } else if (distanceToNext > 500) {
+            zoom = 16;
+        } else if (distanceToNext < 150) {
+            zoom = 18;
+        }
+
         this._mapView.map.go_to_full_with_duration(snappedLatitude,
                                                    snappedLongitude,
-                                                   navigator.params.followZoom,
+                                                   zoom,
                                                    200);
+        
+        // Rotate the map so the heading is pointing up (0 radians is north)
+        // If heading is 90 deg (East), we want to rotate the map -90 deg.
+        if (heading !== undefined && heading !== null) {
+            let rotationDeg = -heading;
+            this._mapView.map.viewport.rotation = rotationDeg * (Math.PI / 180.0);
+        }
     }
 
     addToast(toast) {

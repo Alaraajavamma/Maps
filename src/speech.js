@@ -29,6 +29,7 @@ export class Speech {
     constructor() {
         this._subprocess = null;
         this._language = this._getLanguage();
+        this.muted = false;
     }
 
     get available() {
@@ -41,7 +42,7 @@ export class Speech {
     }
 
     speak(text) {
-        if (!text)
+        if (!text || this.muted)
             return;
 
         this.cancel();

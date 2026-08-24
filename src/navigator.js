@@ -229,6 +229,14 @@ export class Navigator extends GObject.Object {
 
         this._advanceManeuvers(along);
 
+        const segment = this._path[match.segmentIndex];
+        const nextSegment = this._path[match.segmentIndex + 1];
+        let heading = 0;
+        if (segment && nextSegment) {
+            heading = NavGeometry.heading(segment.latitude, segment.longitude,
+                                          nextSegment.latitude, nextSegment.longitude);
+        }
+
         if (!this._active)
             return;
 
@@ -241,7 +249,7 @@ export class Navigator extends GObject.Object {
 
         this.emit('progress', this._nextIndex, distanceToNext,
                   remainingDistance, remainingTime,
-                  match.latitude, match.longitude);
+                  match.latitude, match.longitude, heading);
     }
 
     _updateSpeed(location) {
@@ -373,6 +381,7 @@ GObject.registerClass({
     Signals: {
         'started': {},
         'progress': { param_types: [GObject.TYPE_INT,
+                                    GObject.TYPE_DOUBLE,
                                     GObject.TYPE_DOUBLE,
                                     GObject.TYPE_DOUBLE,
                                     GObject.TYPE_DOUBLE,

@@ -52,6 +52,16 @@ template $Gjs_NavigationBar: Box {
       }
     }
 
+    ToggleButton muteButton {
+      icon-name: "audio-volume-muted-symbolic";
+      tooltip-text: _("Mute Voice Guidance");
+      valign: center;
+
+      styles [
+        "circular",
+      ]
+    }
+
     Button stopButton {
       icon-name: "process-stop-symbolic";
       tooltip-text: _("Stop Navigation");

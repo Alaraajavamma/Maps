@@ -37,6 +37,12 @@ export class NavigationBar extends Gtk.Box {
                                 this._onRerouting.bind(this));
         this._navigator.connect('started', this._onStarted.bind(this));
 
+        this._muteButton.connect('toggled', () => {
+            this._navigator._speech.muted = this._muteButton.active;
+            if (this._muteButton.active)
+                this._navigator._speech.cancel();
+        });
+
         this._onStarted();
     }
 
@@ -79,5 +85,6 @@ GObject.registerClass({
                         'distanceLabel',
                         'instructionLabel',
                         'statusLabel',
+                        'muteButton',
                         'stopButton' ]
 }, NavigationBar);

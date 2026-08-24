@@ -103,3 +103,13 @@ export function matchToPath(path, lat, lon, hintIndex = 0,
         alongSegment:       best.alongSegment
     };
 }
+
+export function heading(lat1, lon1, lat2, lon2) {
+    const latInRad1 = lat1 * DEG_TO_RAD;
+    const latInRad2 = lat2 * DEG_TO_RAD;
+    const dLon = (lon2 - lon1) * DEG_TO_RAD;
+    const y = Math.sin(dLon) * Math.cos(latInRad2);
+    const x = Math.cos(latInRad1) * Math.sin(latInRad2) -
+              Math.sin(latInRad1) * Math.cos(latInRad2) * Math.cos(dLon);
+    return Math.atan2(y, x) / DEG_TO_RAD;
+}
