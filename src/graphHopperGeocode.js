@@ -23,7 +23,7 @@ import GLib from 'gi://GLib';
 import Soup from 'gi://Soup';
 
 import {Application} from './application.js';
-import {KEY} from './graphHopper.js';
+export const KEY = "VCIHrHj0pDKb8INLpT4s5hVadNmJ1Q3vi0J4nJYP";
 import * as HTTP from './http.js';
 import * as PhotonUtils from './photonUtils.js';
 import * as Utils from './utils.js';
