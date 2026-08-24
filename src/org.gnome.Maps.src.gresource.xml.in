@@ -141,6 +141,7 @@
     <file>turnPointMarker.js</file>
     <file>userLocationMarker.js</file>
     <file>utils.js</file>
+    <file>valhalla.js</file>
     <file>uris.js</file>
     <file>wikipedia.js</file>
     <file>xmldom/dom.js</file>
