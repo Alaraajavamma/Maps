@@ -1,0 +1,777 @@
+gnome-maps (45.0-1~mobile1) unstable; urgency=medium
+
+  * Turn-by-turn navigation mobile build with:
+    - Valhalla routing
+    - TTS Voice guidance
+    - Map rotation & auto-zoom
+
+ -- alaraajavamma <aki@urheiluaki.fi>  Mon, 24 Aug 2026 13:34:00 +0300
+
+gnome-maps (45~rc-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control.in: Bump minimum libshumate to 1.1~beta
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 01 Sep 2023 08:42:33 -0400
+
+gnome-maps (45~beta-2) unstable; urgency=medium
+
+  * Release to unstable
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Wed, 30 Aug 2023 18:49:12 -0400
+
+gnome-maps (45~beta-1) experimental; urgency=medium
+
+  * New upstream release
+  * debian/control.in: Bump minimum libadwaita and libshumate
+  * debian/control.in: Build-Depend on libportal & depend on gir1.2-xdp-1.0
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Wed, 09 Aug 2023 15:51:31 -0400
+
+gnome-maps (44.3-2) unstable; urgency=medium
+
+  * Release to unstable
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Sun, 23 Jul 2023 16:32:42 -0400
+
+gnome-maps (44.3-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release 44.3
+
+ -- Jarred Wilson <jarred.wilson@canonical.com>  Wed, 05 Jul 2023 17:49:52 -0400
+
+gnome-maps (44.2-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release
+    - Show thumbnails for places with a linked Wikidata entry with a title
+      image, but that has no linked Wikipedia articles
+      (https://gitlab.gnome.org/GNOME/gnome-maps/-/issues/558)
+    - Show the correct rotation of the user location marker when there is
+      a heading (Geoclue indicating motion), in case the map view is
+      rotated (https://gitlab.gnome.org/GNOME/gnome-maps/-/issues/559)
+
+ -- Amin Bandali <bandali@ubuntu.com>  Fri, 26 May 2023 12:00:27 -0400
+
+gnome-maps (44.1-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Jarred Wilson <jarred.wilson@canonical.com>  Tue, 25 Apr 2023 15:50:34 -0400
+
+gnome-maps (44.0-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Mon, 27 Mar 2023 12:07:59 -0400
+
+gnome-maps (44~rc-1) experimental; urgency=medium
+
+  * New upstream release
+  * Drop unnecessary dependencies. Thanks to Roderich Schupp (Closes: #1032560)
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 08 Mar 2023 18:46:21 -0500
+
+gnome-maps (44~beta-1) experimental; urgency=medium
+
+  * New upstream release
+  * debian/control.in: drop nocheck from desktop-file-utils Build-Depends
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 10 Feb 2023 14:57:25 -0500
+
+gnome-maps (43.4-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update standards version to 4.6.2, no changes needed.
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 03 Feb 2023 14:22:25 -0500
+
+gnome-maps (43.3-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Mon, 09 Jan 2023 12:02:18 -0500
+
+gnome-maps (43.2-1) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * New upstream release
+
+  [ Debian Janitor ]
+  * Update lintian override info format in d/source/lintian-overrides
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 06 Dec 2022 14:42:32 -0500
+
+gnome-maps (43.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 04 Nov 2022 11:47:33 +0100
+
+gnome-maps (43.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control.in: Bump minimum meson to 0.61.0
+  * debian/control.in: Bump minimum libshumate to 1.0.1
+  * debian/control.in: Bump Standards-Version to 4.6.1
+  * Drop patch: applied in new release
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Mon, 19 Sep 2022 10:40:05 -0400
+
+gnome-maps (43~rc-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control.in: Bump minimum libshumate to 1.0.0~beta
+  * Drop librest patch: applied in new release
+  * Add patch to not attempt to install test gresource file
+  * Upload to unstable (Closes: #1017491)
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Mon, 05 Sep 2022 17:27:40 -0400
+
+gnome-maps (43~beta-1) experimental; urgency=medium
+
+  * New upstream release
+  * Drop dependencies on folks, gee & gnome-online-accounts
+  * Update dependencies for switch to libsoup3
+  * Build with gtk4, libadwaita, and libshumate
+  * Add proposed patch to fix build with librest 0.9
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sun, 28 Aug 2022 15:32:02 -0400
+
+gnome-maps (42.3-2) unstable; urgency=medium
+
+  * debian/control.in: Drop unused gir1.2-gfbgraph-0.2 dependency
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 02 Aug 2022 15:07:03 -0400
+
+gnome-maps (42.3-1) unstable; urgency=medium
+
+  * New upstream release (LP: #1980745)
+
+ -- Nathan Pratta Teodosio <nathan.teodosio@canonical.com>  Mon, 04 Jul 2022 11:18:05 -0300
+
+gnome-maps (42.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 07 Jun 2022 16:42:23 -0400
+
+gnome-maps (42.1-1) unstable; urgency=medium
+
+  * New upstream release (LP: #1970988)
+  * debian/control.in: Build-Depend on libgweather-4-dev
+  * Drop patch: applied in new release
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 29 Apr 2022 15:07:10 -0400
+
+gnome-maps (42.0-2) unstable; urgency=medium
+
+  * Cherry-pick proposed patch to switch to libgweather4
+  * debian/control.in: Depend on gir1.2-gweather-4.0 instead of 3.0
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 05 Apr 2022 09:54:53 -0400
+
+gnome-maps (42.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control.in: Bump minimum libhandy to 1.5.0
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sat, 19 Mar 2022 07:57:08 -0400
+
+gnome-maps (41.4-1) unstable; urgency=medium
+
+  * New upstream release
+    - Fix FTBFS with Meson 0.61 (Closes: #1005555)
+    - Translation updates
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 13 Feb 2022 15:52:20 +0000
+
+gnome-maps (41.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 05 Dec 2021 02:37:44 -0500
+
+gnome-maps (41.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 21 Nov 2021 13:04:58 -0500
+
+gnome-maps (41.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sat, 18 Sep 2021 07:26:03 -0400
+
+gnome-maps (40.5-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sat, 18 Sep 2021 07:22:31 -0400
+
+gnome-maps (40.4-1) unstable; urgency=medium
+
+  * New upstream release
+  * Release to unstable
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 22 Aug 2021 06:49:19 -0400
+
+gnome-maps (40.3-1) experimental; urgency=medium
+
+  * New upstream release
+  * Bump debhelper-compat to 13
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 18 Jul 2021 15:49:58 -0400
+
+gnome-maps (40.1-1) experimental; urgency=medium
+
+  * New upstream release:
+    - Place bubbles redesign with larger thumbnails, tidy list view, and
+      summaries from Wikipedia when available in OSM
+    - More adapative UI fixes (for the no-network display)
+    - Restore zooming to bounding boxes in search results (for administrative
+      areas, buildings, etc.)
+    - List compatible form factors in appdata
+    - Don't display invalid URLs and also show error message for invalid URLs
+      when editing POIs in OSM
+    - Show localized name in user's language in place bubbles when available
+      in OSM
+    - Normalize tel: URIs to support the Calls app on Librem 5 and Pinephone
+    - Improve handling of OpenStreetMap URLs (to address objects or
+      coordinated) when pasting into the search bar
+    - Load file contents of shape layer files using async operations (parsing
+      is still done synchronous due to limitations with GJS)
+    - Require GJS 1.66 now, to enable newer ES features like coalesce and
+      the safe navigation operators
+    - Made place bubble adaptive for use on phones
+    - Show native name of places in addition to translated one
+    - Avoid building some Flatpak dependencies which are now in the SDK
+    - Fix a bug resulting in writing a broken last view position on exit in
+      some circumstances
+    - Fix a bug preventing wrapping around at the date line with dark tiles
+    - Increased width of layers thumbnails to avoid empty margins in some
+      translations
+    - Updated POI defintions for OSM editing
+  * debian/control: Update build and test dependencies to match upstream
+
+ -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Tue, 25 May 2021 17:50:59 +0200
+
+gnome-maps (3.38.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+    - Translation updates
+  * Standards-Version: 4.5.1 (no changes required)
+  * Remove empty d/patches/series
+  * Add Lintian override for d/copyright mentioning the LGPL without
+    version.
+    Lintian interprets this as an undefined *license*, which would
+    be a problem; but all versions of the LGPL are Free Software, so
+    an undefined *version* is OK. In any case, this only appears as
+    part of a dual-license with the Expat (MIT/X11) license, which is
+    definitely Free.
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 13 Dec 2020 13:10:56 +0000
+
+gnome-maps (3.38.1.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 11 Oct 2020 07:18:56 -0400
+
+gnome-maps (3.38.0-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Simon McVittie ]
+  * New upstream release
+    - Initial adaptive UI
+    - Added night mode
+    - Added support for hybrid aerial layer
+    - Public transit plugin for South Africa (GoMetro)
+    - Improved keyboard navigation in routing sidebar
+    - Make more use of localized number formatting
+  * Remove libhandy dependency, no longer needed.
+    Its use led to crashes and was reverted.
+
+  [ Phil Wyett ]
+  * Drop '-Wl,--as-needed' from d/rules.
+    This is the default behaviour of current binutils.
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 13 Sep 2020 12:14:01 +0100
+
+gnome-maps (3.37.91-1) experimental; urgency=medium
+
+  * Team upload
+  * d/watch: Watch for development versions
+  * New upstream release
+  * Depend on handy-1
+  * d/copyright: Update
+  * Build-depend on required typelibs, so we can run the tests
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 01 Sep 2020 11:12:42 +0100
+
+gnome-maps (3.36.4-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * debian/upstream/metadata: Add
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 01 Sep 2020 10:00:00 +0100
+
+gnome-maps (3.36.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 02 May 2020 18:23:52 +0200
+
+gnome-maps (3.36.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sat, 28 Mar 2020 22:22:35 -0400
+
+gnome-maps (3.36.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Laurent Bigonville <bigon@debian.org>  Thu, 12 Mar 2020 19:23:43 +0100
+
+gnome-maps (3.35.90-1) unstable; urgency=medium
+
+  * New upstream beta release
+  * Bump Standards-Version to 4.5.0
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 02 Feb 2020 10:05:30 -0500
+
+gnome-maps (3.34.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 09 Oct 2019 20:05:47 -0400
+
+gnome-maps (3.34.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sebastien Bacher <seb128@debian.org>  Wed, 11 Sep 2019 10:26:54 +0200
+
+gnome-maps (3.33.91-1) experimental; urgency=medium
+
+  * debian/watch: Find unstable versions
+  * New upstream release
+    - Fix bug going back to already selected place from the search result list
+    - Start immediatly at the last viewed location when app was closed last
+    - Remember the map type (street or aerial) from when the app was closed
+      last
+    - Handle opening OpenStreetMap URLs pointing to either an object or bare
+      coordinates by pasting it into the search entry and also as a program
+      argument, in the same manner as with geo: URIs
+    - Auto-complete searches ("search-as-you-type") using GraphHopper geocoder
+      / Photon
+    - Redesigned Send to-dialog with ability to copy and send locations in
+      e-mails and better integration with Weather and Clocks
+    - Show clockwise roundabout icons for turn-by-turn routing in left-hand
+      traffic countries and territories
+    - Update appdata screenshots with tile style
+    - Fix a crash when there's many contacts with addresses in an Evolution
+      address book
+    - Accept additional formats when entering raw coordinates in the search
+      entry (decimal lat/lon degrees format with literal ° symbol, and
+      degrees, minutes, second format)
+    - Stop using GtkOffscreenWindow (prerequisite for eventually porting to
+      GTK 4)
+    - Fix printing dialog not closing in some circumstances
+    - Add some missing appstream metadata
+    - Add tests validating appdata and desktop files
+    - Remove some unnessesary instructions in turn-by-turn route searches
+
+ -- Iain Lane <laney@debian.org>  Wed, 21 Aug 2019 11:24:13 +0100
+
+gnome-maps (3.32.1-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 11 Apr 2019 15:43:09 +0200
+
+gnome-maps (3.32.0-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 15 Mar 2019 05:48:37 -0400
+
+gnome-maps (3.31.90-1) experimental; urgency=medium
+
+  * New upstream development release
+  * Build-Depend on debhelper-compat 12 and drop debian/compat
+  * Build-Depend on dh-sequence-gir and dh-sequence-gnome
+  * Build-Depend on libxml2-utils for xmllint
+  * Bump Standards-Version to 4.3.0
+
+ -- Jeremy Bicha <jbicha@debian.org>  Thu, 07 Feb 2019 07:48:45 -0500
+
+gnome-maps (3.30.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add -Wl,-O1 to LDFLAGS
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 11 Dec 2018 17:58:41 -0500
+
+gnome-maps (3.30.2.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 16 Nov 2018 15:55:13 -0500
+
+gnome-maps (3.30.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Tim Lunn <tim@feathertop.org>  Fri, 28 Sep 2018 10:42:10 +1000
+
+gnome-maps (3.30.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.2.1
+  * Add X-Ubuntu-Use-Langpack to opt in to Ubuntu language pack handling
+    (LP: #1779574)
+  * Release to unstable
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 04 Sep 2018 21:12:50 -0400
+
+gnome-maps (3.29.91-1) experimental; urgency=medium
+
+  * Team upload
+  * d/watch: Watch for odd-numbered (development) versions
+  * New upstream release
+  * d/copyright: Update
+  * Update versioned build-dependencies
+  * Apply build-dependency versions to runtime dependencies too
+  * Normalize (build-)dependencies with wrap-and-sort -ab
+  * Build with meson
+  * Set Rules-Requires-Root to no
+  * Remove trailing whitespace from previous changelog entries
+  * Bump Standards-Version to 4.2.0 (no changes required)
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 14 Aug 2018 09:10:52 +0100
+
+gnome-maps (3.28.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Tim Lunn <tim@feathertop.org>  Tue, 08 May 2018 21:08:00 +1000
+
+gnome-maps (3.28.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.1.4
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 10 Apr 2018 13:43:47 -0400
+
+gnome-maps (3.28.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 14 Mar 2018 19:48:29 -0400
+
+gnome-maps (3.27.92-1) unstable; urgency=medium
+
+  * new upstream release candidate
+  * Drop patch included in new release
+  * Release to unstable
+
+ -- Tim Lunn <tim@feathertop.org>  Wed, 07 Mar 2018 20:51:42 +1100
+
+gnome-maps (3.27.90-2) experimental; urgency=medium
+
+  * Team upload
+  * d/p/dist/Add-missing-template-files-for-enum-types.patch:
+    Add missing lib/maps-enum-types.[ch].template, from upstream git
+    (Closes: #891133)
+  * d/copyright: Add copyright, license details of third-party
+    JavaScript noticed while fixing upstream distcheck target
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 22 Feb 2018 19:18:13 +0000
+
+gnome-maps (3.27.90-1) experimental; urgency=medium
+
+  * New upstream release
+  * Bump minimum gjs to 1.50.0
+  * Bump Standards-Version to 4.1.3
+
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 07 Feb 2018 17:54:05 -0500
+
+gnome-maps (3.26.2-3) unstable; urgency=medium
+
+  * Update Vcs fields for migration to https://salsa.debian.org/
+  * Bump debhelper compat to 11
+  * Add lintian override for desktop-command-not-in-package
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 02 Feb 2018 15:21:40 -0500
+
+gnome-maps (3.26.2-2) unstable; urgency=medium
+
+  * Update Vcs fields for conversion to git
+  * Add debian/gbp.conf
+  * Bump Standards-Version to 4.1.2
+
+ -- Jeremy Bicha <jbicha@debian.org>  Thu, 14 Dec 2017 22:24:00 -0500
+
+gnome-maps (3.26.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Build-Depends on libglib2.0-dev to (>= 2.44.0)
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 31 Oct 2017 12:12:27 +0100
+
+gnome-maps (3.26.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.1.1
+
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 04 Oct 2017 15:20:28 -0400
+
+gnome-maps (3.26.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop obsolete Build-Depends on dh-autoreconf & gnome-common
+
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 13 Sep 2017 17:48:36 -0400
+
+gnome-maps (3.25.91-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control.in:
+    - Bump minimum libgtk-3-dev to 3.22
+  * Bump Standards-Version to 4.1.0
+
+ -- Jeremy Bicha <jbicha@debian.org>  Thu, 31 Aug 2017 19:34:16 -0400
+
+gnome-maps (3.22.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 08 Nov 2016 01:29:23 +0100
+
+gnome-maps (3.22.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 11 Oct 2016 13:19:53 +0200
+
+gnome-maps (3.22.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 19 Sep 2016 11:26:45 +0200
+
+gnome-maps (3.21.92-1) unstable; urgency=medium
+
+  * New upstream development release.
+  * Bump Build-Depends on libchamplain-0.12-dev to (>= 0.12.14) as per
+    configure.ac.
+  * Bump debhelper compat level to 10.
+  * Tighten Depends on libglib2.0-bin to ensure we have a recent enough
+    version providing gapplication.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 13 Sep 2016 00:36:06 +0200
+
+gnome-maps (3.21.91-1) unstable; urgency=low
+
+  * New upstream beta release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 30 Aug 2016 20:06:41 +0200
+
+gnome-maps (3.20.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add dependency on libglib2.0-bin, for gapplication.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 23 Aug 2016 12:11:51 +0200
+
+gnome-maps (3.20.2-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Uses a new tile server. Closes: #830842.
+  * Bump Standards-Version to 3.9.8.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 31 Jul 2016 12:35:36 +0200
+
+gnome-maps (3.20.1-1) unstable; urgency=medium
+
+  [ Michael Biebl ]
+  * Drop uploaders.mk from debian/rules as this breaks the clean target with
+    dh. Instead use the gnome dh addon which updates debian/control via
+    dh_gnome_clean.
+
+  [ Andreas Henriksson ]
+  * New upstream release.
+  * Bump build-dependency according to configure.ac changes:
+    - libchamplain-0.12-dev (>= 0.12.13)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 15 Apr 2016 18:17:18 +0200
+
+gnome-maps (3.20.0-2) unstable; urgency=medium
+
+  * Bump gjs (build-)dependencies to >= 1.44.0 (Closes: #819548)
+    Thanks to Marcus Lundblad for identifying this.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 03 Apr 2016 16:52:22 +0200
+
+gnome-maps (3.20.0-1) unstable; urgency=medium
+
+  * Add Depends on gir1.2-webkit2-4.0 since WebKit2 is used at runtime now.
+    Thanks to Marcus Lundblad for spotting this.
+  * New upstream release.
+  * Add additional dependencies for newly required typelib files:
+    - gir1.2-geoclue-2.0
+    - gir1.2-secret-1
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 24 Mar 2016 16:02:46 +0100
+
+gnome-maps (3.19.92-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Add build-dependencies on librest-dev and libxml2-dev
+    - configure.ac now checks for these, gir dependencies already exists.
+  * Bump Standards-Version to 3.9.7
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 14 Mar 2016 21:49:36 +0100
+
+gnome-maps (3.18.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 11 Nov 2015 02:08:27 +0100
+
+gnome-maps (3.18.1-2) unstable; urgency=medium
+
+  * Add missing dependencies on gir1.2-gweather-3.0, gir1.2-rest-0.7 and
+    gir1.2-soup-2.4. (Closes: #801526)
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 11 Oct 2015 19:50:48 +0200
+
+gnome-maps (3.18.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 11 Oct 2015 15:55:56 +0200
+
+gnome-maps (3.18.0.1-1) unstable; urgency=medium
+
+  * Add dependency on gir1.2-goa-1.0 (Closes: #794092)
+  * New upstream release.
+  * Drop debian/patches/schema_translation.patch
+    - now included in upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 02 Oct 2015 23:31:35 +0200
+
+gnome-maps (3.16.2-1) unstable; urgency=medium
+
+  [ Michael Biebl ]
+  * New upstream release.
+  * Update debian/copyright to make it compliant with version 1.0 of the spec.
+  * Exclude the package private libgnome-maps.so library from dh_makeshlibs
+    and remove the unnecessary .a and .la files.
+  * Enable the gir dh addon since gnome-maps builds a private typelib now.
+  * Update Depends:
+    - Bump gjs to (>= 1.43.3)
+    - Bump gir1.2-geocodeglib-1.0 to (>= 3.15.2)
+    - Add gir1.2-gfbgraph-0.2
+  * Add Build-Depends on gjs so the correct path of the gjs interpreter binary
+    is embedded into /usr/bin/gnome-maps.
+
+  [ Jackson Doak ]
+  * Update Build-depends:
+    - Bump libgjs-dev to (>= 1.43.3)
+    - Bump libglib2.0-dev to (>= 2.39.3)
+    - Add libgtk-3-dev (>= 3.15.9)
+    - Add geoclue-2.0 (>= 0.12.99)
+    - Add libgee-0.8-dev (>= 0.16.0)
+    - Add libfolks-dev (>= 0.10.0)
+    - Add libgeocode-glib-dev (>= 3.15.2)
+    - Add libchamplain-0.12-dev (>= 0.12.9)
+    - Add libgirepository1.0-dev and gobject-introspection (>= 0.6.3)
+    - Add intltool (>= 0.40)
+  * debian/patches/schema_translation.patch:
+    - Fix build failure with intltool translation of gsettings schema
+      when using glib2.0 >= 2.45
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 04 Jul 2015 15:23:48 +0200
+
+gnome-maps (3.14.1.2-1) unstable; urgency=medium
+
+  [ Jackson Doak ]
+  * New upstream release
+
+  [ Michael Biebl ]
+  * Bump Standards-Version to 3.9.6. No further changes.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 13 Oct 2014 22:46:21 +0200
+
+gnome-maps (3.14.1-1) unstable; urgency=medium
+
+  [ Jackson Doak ]
+  * New upstream bugfix release
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 11 Oct 2014 18:00:24 +0200
+
+gnome-maps (3.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop debian/patches/gjs-readwrite-flags.patch, fixed upstream.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 22 Sep 2014 23:04:28 +0200
+
+gnome-maps (3.13.91-1) experimental; urgency=medium
+
+  * debian/watch: only look for stable releases.
+  * New upstream development release.
+  * Bump dependencies to have new enough runtime versions:
+    + gir1.2-geocodeglib-1.0 (>= 3.13),
+    + gir1.2-glib-2.0 (>= 1.41),
+    + gjs (>= 1.41),
+  * Add debian/patches/gjs-readwrite-flags.patch
+    - Avoid GObject.ParamFlags.READWRITE flag for now.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 14 Sep 2014 10:08:27 +0200
+
+gnome-maps (3.12.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Upload to unstable.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 15 Jul 2014 00:14:59 +0200
+
+gnome-maps (3.12.1-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 09 May 2014 20:39:57 +0200
+
+gnome-maps (3.12.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update build-dependencies according to configure.ac changes:
+    - Bump glib 2.39.3 and gjs 1.39.0
+  * Bump debhelper compat to 9 (and build-dependency)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 06 Apr 2014 18:06:54 +0200
+
+gnome-maps (3.10.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control.in: Add dependency against gjs package
+  * debian/control.in: Depends against geoclue-2.0 package
+  * debian/control.in: Bump Standards-Version to 3.9.5 (no further changes)
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 16 Feb 2014 12:10:22 +0100
+
+gnome-maps (3.10.0-1) experimental; urgency=low
+
+  * Initial release
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 15 Oct 2013 22:08:33 +0200

@@ -1,0 +1,2 @@
+# It's an undefined *version*, not an undefined *license*, and all LGPL versions are DFSG
+gnome-maps source: license-problem-undefined-license lgpl-unspecified-version [debian/copyright:*]
