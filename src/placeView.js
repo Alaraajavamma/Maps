@@ -312,8 +312,7 @@ export class PlaceView extends Gtk.Box {
              */
             if (this._nativeName.get_layout().get_unknown_glyphs_count() === 0)
                 this._nativeName.visible = true;
-        } else if (Utils.getLanguage() === 'ja' &&
-                   place.name === place.nativeName && place.hiraganaName &&
+        } else if (place.name === place.nativeName && place.hiraganaName &&
                    place.name !== place.hiraganaName) {
             /* if the displayed name and the native name are identical, show
              * a Japanese Hiragana name form when available providing a
@@ -378,21 +377,17 @@ export class PlaceView extends Gtk.Box {
     }
 
     _getStoptimesSearchRadius() {
-        const place = this._place;
+        const tags = this._place.osmTags;
 
-        if (place.osmKey === 'highway' &&
-            (place.osmValue === 'bus_stop' || place.osmValue === 'taxi_rank') ||
-            (place.osmKey === 'railway' && place.osmValue === 'tram_stop')) {
+        if (tags['railway'] === 'tram_stop' || tags['highway'] === 'bus_stop')
             return 100;
-        } else if (place.osmKey === 'aeroway' && place.osmValue === 'aerodrome') {
+        else if (tags['aeroway'] === 'aerodrome')
             return 1000;
-        } else if (place.osmKey === 'railway' && (place.osmKey === 'station' ||
-                                                  place.osmKey === 'halt') &&
-                   place.station === 'funicular') {
+        else if ((tags['railway'] === 'station' || tags['railway'] === 'halt') &&
+                 tags['station'] === 'funicular')
             return 100;
-        } else {
+        else
             return 300;
-        }
     }
 
     _loadTransitStopTimes(arrivals = false, extendPrevious = false, routeType) {

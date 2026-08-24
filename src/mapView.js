@@ -1093,9 +1093,9 @@ export class MapView extends Gtk.Overlay {
                                           markerSize: 16,
                                           mapView:   this });
         } else {
-            return new TurnPointMarker({ turnPoint: turnPoint,
-                                         queryPoint: queryPoint,
-                                         mapView: this });
+            new TurnPointMarker({ turnPoint: turnPoint,
+                                  queryPoint: queryPoint,
+                                  mapView: this });
         }
     }
 
