@@ -59,6 +59,10 @@ export class PreferencesDownloadCountry extends Adw.NavigationPage {
         Utils.debug(`Triggering background download of Valhalla routing graphs for ${countryData.name}`);
         Utils.debug(`URL: ${graphUrl}`);
         
+        // Show user feedback that both map and routing are downloading
+        const toast = Adw.Toast.new(_("Downloading map and routing data for %s...").format(countryData.name));
+        this.get_ancestor(Adw.PreferencesDialog).add_toast(toast);
+        
         // This will eventually integrate with Soup.Session and Gio.File to save and unpack
         // the routing tiles into ~/.local/share/gnome-maps/valhalla_tiles/
     }
