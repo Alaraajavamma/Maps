@@ -50,10 +50,10 @@ export class Speech {
         this._pauseMedia();
 
         try {
-            let engine = GLib.find_program_in_path('spd-say') ? 'spd-say' : 'espeak-ng';
-            let args = engine === 'spd-say' ? 
-                       ['spd-say', '-l', this._language, '-w', text] :
-                       ['espeak-ng', '-v', this._language, '--', text];
+            let engine = GLib.find_program_in_path('espeak-ng') ? 'espeak-ng' : 'spd-say';
+            let args = engine === 'espeak-ng' ? 
+                       ['espeak-ng', '-v', this._language, '--', text] :
+                       ['spd-say', '-l', this._language, '-w', text];
                        
             this._subprocess =
                 Gio.Subprocess.new(args,
@@ -79,11 +79,15 @@ export class Speech {
         if (!GLib.find_program_in_path('playerctl'))
             return;
         try {
-            let proc = Gio.Subprocess.new(['playerctl', 'status'], Gio.SubprocessFlags.STDOUT_PIPE);
+            let proc = Gio.Subprocess.new(['playerctl', 'status'], 
+                                          Gio.SubprocessFlags.STDOUT_PIPE | 
+                                          Gio.SubprocessFlags.STDERR_SILENCE);
             let [, stdout] = proc.communicate_utf8(null, null);
             if (stdout && stdout.trim() === 'Playing') {
                 this._wasPlaying = true;
-                Gio.Subprocess.new(['playerctl', 'pause'], Gio.SubprocessFlags.NONE);
+                Gio.Subprocess.new(['playerctl', 'pause'], 
+                                   Gio.SubprocessFlags.STDOUT_SILENCE |
+                                   Gio.SubprocessFlags.STDERR_SILENCE);
             } else {
                 this._wasPlaying = false;
             }
@@ -94,7 +98,9 @@ export class Speech {
         if (!this._wasPlaying || !GLib.find_program_in_path('playerctl'))
             return;
         try {
-            Gio.Subprocess.new(['playerctl', 'play'], Gio.SubprocessFlags.NONE);
+            Gio.Subprocess.new(['playerctl', 'play'], 
+                               Gio.SubprocessFlags.STDOUT_SILENCE |
+                               Gio.SubprocessFlags.STDERR_SILENCE);
         } catch(e) {}
         this._wasPlaying = false;
     }
