@@ -20,17 +20,26 @@
  * Author: James Westman <james@jwestman.net>
  */
 
+import Gio from "gi://Gio";
 import GObject from "gi://GObject";
 import Adw from "gi://Adw";
 
 import "./preferencesDownloads.js";
 
-export class PreferencesDialog extends Adw.PreferencesDialog {}
+export class PreferencesDialog extends Adw.PreferencesDialog {
+    constructor(params) {
+        super(params);
+
+        const settings = new Gio.Settings({ schema_id: 'org.gnome.Maps' });
+        settings.bind('offline-routing', this._offlineRoutingRow, 'active',
+                      Gio.SettingsBindFlags.DEFAULT);
+    }
+}
 
 GObject.registerClass(
     {
         Template: "resource:///org/gnome/Maps/ui/preferences.ui",
-        InternalChildren: [],
+        InternalChildren: ['offlineRoutingRow'],
     },
     PreferencesDialog
 );

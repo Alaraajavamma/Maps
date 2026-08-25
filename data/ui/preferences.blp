@@ -8,4 +8,16 @@ template $Gjs_PreferencesDialog: Adw.PreferencesDialog {
   content-height: 480;
 
   $Gjs_PreferencesDownloads {}
+
+  Adw.PreferencesPage {
+    title: _("Routing");
+    icon-name: "route-symbolic";
+
+    Adw.PreferencesGroup {
+      Adw.SwitchRow offlineRoutingRow {
+        title: _("Offline Routing");
+        subtitle: _("Use a local Valhalla routing server (requires localhost:8002)");
+      }
+    }
+  }
 }

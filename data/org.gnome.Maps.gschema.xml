@@ -90,5 +90,10 @@
       <summary>Show location marker</summary>
       <description>Whether to show the user location marker (when location is known).</description>
     </key>
+    <key name="offline-routing" type="b">
+      <default>false</default>
+      <summary>Offline routing</summary>
+      <description>Whether to use a local Valhalla routing server (http://localhost:8002) for offline routing.</description>
+    </key>
   </schema>
 </schemalist>
