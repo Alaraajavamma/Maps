@@ -23,6 +23,8 @@ import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import Soup from 'gi://Soup';
 
+import {Application} from './application.js';
+
 import {BoundingBox} from './boundingBox.js';
 import * as EPAF from './epaf.js';
 import {TurnPoint} from './route.js';
@@ -82,6 +84,7 @@ export class Valhalla {
         this._session =
             new Soup.Session({ user_agent: 'gnome-maps/' + pkg.version });
         this._baseURL = 'https://valhalla1.openstreetmap.de';
+        this._localURL = 'http://localhost:8002';
         this._language = this._getLanguage();
         this._route = route;
         this._query = query;
@@ -124,7 +127,8 @@ export class Valhalla {
 
     _queryValhalla(points, transportationType, callback) {
         const body = this._buildRequest(points, transportationType);
-        const url = this._baseURL + '/route';
+        const isOffline = Application.settings.get_boolean('offline-routing');
+        const url = (isOffline ? this._localURL : this._baseURL) + '/route';
         const msg = Soup.Message.new('POST', url);
 
         msg.set_request_body_from_bytes('application/json',
@@ -165,7 +169,12 @@ export class Valhalla {
                     this._query.latest.place = null;
                 else
                     this.route.reset();
-                this.route.error(_("Route request failed."));
+                
+                const isOffline = Application.settings.get_boolean('offline-routing');
+                if (isOffline)
+                    this.route.error(_("Offline route request failed. Is the local Valhalla engine running?"));
+                else
+                    this.route.error(_("Route request failed."));
             } else if (!result) {
                 if (this._query.latest)
                     this._query.latest.place = null;
