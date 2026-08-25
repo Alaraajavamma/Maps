@@ -5,6 +5,9 @@ import GObject from "gi://GObject";
 import { Application } from "./application.js";
 import { Countries } from "./countries.js";
 import * as Utils from "./utils.js";
+import gettext from "gettext";
+
+const _ = gettext.gettext;
 
 export class PreferencesDownloadCountry extends Adw.NavigationPage {
     constructor(params) {
