@@ -60,7 +60,7 @@ export class PreferencesDownloads extends Adw.PreferencesPage {
             this._banner,
             "title",
             GObject.BindingFlags.SYNC_CREATE,
-            this.pauseReasonsText.bind(this),
+            (_bind, source) => [true, this.pauseReasonsText(null, source)],
             null
         );
         
