@@ -54,6 +54,16 @@ export class PreferencesDownloads extends Adw.PreferencesPage {
             const toast = Adw.Toast.new(message);
             this.get_ancestor(Adw.PreferencesDialog).add_toast(toast);
         });
+        
+        this.downloads.bind_property_full(
+            "pause-reasons",
+            this._banner,
+            "title",
+            GObject.BindingFlags.SYNC_CREATE,
+            this.pauseReasonsText.bind(this),
+            null
+        );
+        
         this.updateProgress();
 
         const styleManager = Adw.StyleManager.get_default();
@@ -152,6 +162,7 @@ GObject.registerClass(
     {
         Template: "resource:///org/gnome/Maps/ui/preferences-downloads.ui",
         InternalChildren: [
+            "banner",
             "downloadsAreasBox",
             "noDownloads",
             "progress",

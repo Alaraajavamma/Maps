@@ -8,7 +8,7 @@ template $Gjs_PreferencesDownloads: Adw.PreferencesPage {
     "Download maps for offline use.\n\nDownloaded areas can be viewed when no internet connection is available. Not all features are available offline."
   );
 
-  banner: Adw.Banner {
+  banner: Adw.Banner banner {
     title: "";
     button-label: _("Resume");
     revealed: bind template.downloads as <$Gjs_DownloadManager>.paused;
