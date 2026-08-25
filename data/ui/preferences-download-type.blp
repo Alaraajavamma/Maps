@@ -1,0 +1,38 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $Gjs_PreferencesDownloadType: Adw.NavigationPage {
+  title: _("Add Download");
+
+  Adw.PreferencesPage {
+    Adw.PreferencesGroup {
+      title: _("Select Download Type");
+      
+      Adw.ActionRow {
+        title: _("Search for a Country");
+        subtitle: _("Download a perfectly cropped map of an entire country");
+        activatable: true;
+        
+        [prefix]
+        Image {
+          icon-name: "system-search-symbolic";
+        }
+        
+        activated => $onCountryActivated();
+      }
+      
+      Adw.ActionRow {
+        title: _("Draw Custom Area");
+        subtitle: _("Select a specific rectangular region on the map");
+        activatable: true;
+        
+        [prefix]
+        Image {
+          icon-name: "edit-select-symbolic";
+        }
+        
+        activated => $onCustomAreaActivated();
+      }
+    }
+  }
+}

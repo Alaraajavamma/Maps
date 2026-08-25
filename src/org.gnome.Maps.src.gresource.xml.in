@@ -102,6 +102,9 @@
     <file>poiCategoryRow.js</file>
     <file>preferences.js</file>
     <file>preferencesDownloadNew.js</file>
+    <file>preferencesDownloadType.js</file>
+    <file>preferencesDownloadCountry.js</file>
+    <file>countries.js</file>
     <file>preferencesDownloads.js</file>
     <file>printLayout.js</file>
     <file>printOperation.js</file>

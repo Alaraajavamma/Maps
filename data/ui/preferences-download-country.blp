@@ -1,0 +1,31 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $Gjs_PreferencesDownloadCountry: Adw.NavigationPage {
+  title: _("Select Country");
+
+  Box {
+    orientation: vertical;
+
+    SearchEntry searchEntry {
+      margin-top: 12;
+      margin-bottom: 12;
+      margin-start: 12;
+      margin-end: 12;
+      search-changed => $onSearchChanged();
+    }
+
+    ScrolledWindow {
+      vexpand: true;
+      
+      Adw.PreferencesPage {
+        Adw.PreferencesGroup {
+          ListBox countryList {
+            styles ["boxed-list"]
+            row-activated => $onRowActivated();
+          }
+        }
+      }
+    }
+  }
+}

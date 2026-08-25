@@ -31,7 +31,7 @@ import Shumate from "gi://Shumate";
 
 import { Application } from "./application.js";
 import { DownloadManager, DownloadArea } from "./downloads.js";
-import { PreferencesDownloadNew } from "./preferencesDownloadNew.js";
+import { PreferencesDownloadType } from "./preferencesDownloadType.js";
 import * as MapSource from "./mapSource.js";
 
 export class PreferencesDownloads extends Adw.PreferencesPage {
@@ -89,7 +89,7 @@ export class PreferencesDownloads extends Adw.PreferencesPage {
 
     showAddPage() {
         this.get_ancestor(Adw.PreferencesDialog).push_subpage(
-            new PreferencesDownloadNew()
+            new PreferencesDownloadType()
         );
     }
 
